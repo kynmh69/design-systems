@@ -19,6 +19,15 @@ export const patterns: Pattern[] = [
     tags: ["button", "interactive", "cta"],
     path: "/patterns/button-variants",
   },
+  {
+    id: "card-variants",
+    title: "Card Variants",
+    description:
+      "Flexible card components for displaying grouped content — stats, profiles, products, notifications, and interactive surfaces.",
+    category: "components",
+    tags: ["card", "layout", "container", "surface"],
+    path: "/patterns/card-variants",
+  },
 ];
 
 export const categoryLabels: Record<PatternCategory, string> = {
