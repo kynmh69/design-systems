@@ -1,12 +1,12 @@
 # Design Systems
 
-shadcn/ui を使ったUIパターンのコレクションです。Next.js 15 (App Router) + TypeScript + Tailwind CSS で構築されています。
+shadcn/ui を使ったUIパターンのコレクションです。Next.js 16 (App Router) + TypeScript + Tailwind CSS で構築されています。
 
 ## スタック
 
 | 技術 | バージョン |
 |------|-----------|
-| Next.js | 15 (App Router) |
+| Next.js | 16 (App Router) |
 | TypeScript | ^5 |
 | Tailwind CSS | ^3 |
 | shadcn/ui | - |
@@ -41,9 +41,10 @@ docker compose down
 
 ## パターン一覧
 
-| ID | タイトル | カテゴリ |
-|----|---------|---------|
-| `button-variants` | Button Variants | components |
+| ID | タイトル | カテゴリ | 説明 |
+|----|---------|---------|------|
+| `button-variants` | Button Variants | components | Default、Destructive、Outline など全バリアント＋サイズ |
+| `card-variants` | Card Variants | components | Stats、Profile、Product、Notification など各種カードレイアウト |
 
 ## プロジェクト構成
 
@@ -54,10 +55,15 @@ src/
 │   ├── layout.tsx
 │   ├── globals.css
 │   └── patterns/
-│       └── [pattern-id]/
-│           └── page.tsx                # 各パターンページ
+│       ├── button-variants/
+│       │   └── page.tsx                # Button Variants パターン
+│       └── card-variants/
+│           └── page.tsx                # Card Variants パターン
 ├── components/
 │   └── ui/                             # shadcn/ui コンポーネント
+│       ├── badge.tsx
+│       ├── button.tsx
+│       └── card.tsx
 └── lib/
     ├── patterns.ts                     # パターンレジストリ
     └── utils.ts                        # cn() ユーティリティ
